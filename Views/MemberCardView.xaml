@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Cisneros_Cahueñas_Puga_Notes.Views.MemberCardView">
+    <Frame Padding="10" Margin="5" CornerRadius="10" BackgroundColor="#f0f0f0">
+        <HorizontalStackLayout Spacing="15">
+            <Image Source="{Binding Photo}" WidthRequest="64" HeightRequest="64" Aspect="AspectFill" />
+            <VerticalStackLayout>
+                <Label Text="{Binding Nombre}" FontAttributes="Bold" FontSize="18"/>
+                <Label Text="{Binding Edad, StringFormat='Age: {0}'}"/>
+                <Label Text="{Binding DeporteFavorito, StringFormat='Favorite Sport: {0}'}"/>
+            </VerticalStackLayout>
+        </HorizontalStackLayout>
+    </Frame>
+</ContentView>

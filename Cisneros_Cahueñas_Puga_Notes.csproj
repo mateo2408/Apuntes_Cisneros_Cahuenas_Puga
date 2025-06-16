@@ -20,7 +20,7 @@
         <Nullable>enable</Nullable>
 
         <!-- Display name -->
-        <ApplicationTitle>Cisneros_Notes</ApplicationTitle>
+        <ApplicationTitle>Notes</ApplicationTitle>
 
         <!-- App Identifier -->
         <ApplicationId>com.companyname.cisneros_notes</ApplicationId>
