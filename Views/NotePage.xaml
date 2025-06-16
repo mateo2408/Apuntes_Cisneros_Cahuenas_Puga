@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:Cisneros_Cahueñas_Puga_Notes.Models"
+             x:Class="Cisneros_Cahueñas_Puga_Notes.Views.NotePage"
+             x:DataType="models:Note">
+    <ContentPage.Content>
+        <VerticalStackLayout Spacing="20" Margin="20" HorizontalOptions="Center">
+            <Editor x:Name="TextEditor"
+                    Placeholder="Enter your note"
+                    Text="{Binding Text}"
+                    HeightRequest="120"
+                    WidthRequest="300"
+                    HorizontalOptions="Center" />
+
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="12" WidthRequest="300">
+                <Button Text="Save"
+                        Clicked="SaveButton_Clicked" />
+
+                <Button Grid.Column="1"
+                        Text="Delete"
+                        Clicked="DeleteButton_Clicked" />
+            </Grid>
+        </VerticalStackLayout>
+    </ContentPage.Content>
+</ContentPage>
