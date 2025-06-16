@@ -2,26 +2,26 @@
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:models="clr-namespace:Cisneros_Cahueñas_Puga_Notes.Models"
+             xmlns:viewModels="clr-namespace:Cisneros_Cahueñas_Puga_Notes.ViewModels"
              x:Class="Cisneros_Cahueñas_Puga_Notes.Views.NotePage"
-             x:DataType="models:Note">
-    <ContentPage.Content>
-        <VerticalStackLayout Spacing="20" Margin="20" HorizontalOptions="Center">
-            <Editor x:Name="TextEditor"
-                    Placeholder="Enter your note"
-                    Text="{Binding Text}"
-                    HeightRequest="120"
-                    WidthRequest="300"
-                    HorizontalOptions="Center" />
+             x:DataType="viewModels:NoteViewModel">
+    <ContentPage.BindingContext>
+        <viewModels:NoteViewModel />
+    </ContentPage.BindingContext>
+    <VerticalStackLayout Spacing="10" Margin="5">
+        <Editor x:Name="TextEditor"
+                Placeholder="Enter your note"
+                Text="{Binding Text}"
+                HeightRequest="100" />
 
-            <Grid ColumnDefinitions="*,*" ColumnSpacing="12" WidthRequest="300">
-                <Button Text="Save"
-                        Clicked="SaveButton_Clicked" />
+        <Grid ColumnDefinitions="*,*" ColumnSpacing="4">
+            <Button Text="Save"
+                    Command="{Binding SaveCommand}"/>
 
-                <Button Grid.Column="1"
-                        Text="Delete"
-                        Clicked="DeleteButton_Clicked" />
-            </Grid>
-        </VerticalStackLayout>
-    </ContentPage.Content>
+            <Button Grid.Column="1"
+                    Text="Delete"
+                    Command="{Binding DeleteCommand}"/>
+
+        </Grid>
+    </VerticalStackLayout>
 </ContentPage>
