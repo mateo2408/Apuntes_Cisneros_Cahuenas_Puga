@@ -3,6 +3,7 @@
              xmlns:viewModels="clr-namespace:Cisneros_Cahueñas_Puga_Notes.ViewModels"
              x:Class="Cisneros_Cahueñas_Puga_Notes.Views.AllNotesPage"
              Title="Your Notes"
+             NavigatedTo="ContentPage_NavigatedTo"
              x:DataType="viewModels:NotesViewModel">
     <ContentPage.BindingContext>
         <viewModels:NotesViewModel />
