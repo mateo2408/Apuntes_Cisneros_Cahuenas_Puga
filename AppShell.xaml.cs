@@ -1,10 +1,13 @@
-﻿namespace Cisneros_Notes;
+﻿using Cisneros_Cahueñas_Puga_Notes.Views;
+using Microsoft.Maui.Controls;
+
+namespace Cisneros_Cahueñas_Puga_Notes;
 
 public partial class AppShell : Shell
 {
     public AppShell()
     {
         InitializeComponent();
-        Routing.RegisterRoute(nameof(Views.NotePage), typeof(Views.NotePage));
+        Routing.RegisterRoute("NotePage", typeof(NotePage));
     }
 }
