@@ -8,7 +8,9 @@ internal class AboutViewModel
     public string Title => AppInfo.Name;
     public string Version => AppInfo.VersionString;
     public string MoreInfoUrl => "https://aka.ms/maui";
-    public string Message => "This app is written in XAML and C# with .NET MAUI.";
+    public string Message => "Nombre: David Puga\nEdad: 20\nDeporte favorito: fútbol \n" +
+                             "Nombre: Alexander Cahueñas \nEdad: 21 \nDeporte favorito: basquetball \n" +
+                             "Nombre: Mateo Cisneros \nEdad: 20 \nDeporte favorito: F1\n\n";
     public ICommand ShowMoreInfoCommand { get; }
 
     public AboutViewModel()
